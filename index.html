@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="border-form">
+      <form class="contact-form container" action="/submit-form" method="POST">
+        <div class="box container">
+          <h1 class="title">Create  an account</h1>
+        </div>
+        <div class="flex container">
+          <div class="margin-right">
+            <label for="user-name" class="form-label"
+              >First name</label
+            >
+            <input
+              type="text"
+              name="userName"
+              id="user-name"
+              placeholder="enter your first name"
+              value=""
+              pattern="^[a-zA-ZA-Яа-яЁё\s]+$"
+              required
+              class="form-input validate"
+            />
+            <div class="error"></div>
+          </div>
+          <div>
+            <label for="last-name" class="form-label">Last name</label>
+            <input
+              type="text"
+              name="lastName"
+              id="last-name"
+              placeholder="enter your last name"
+              value=""
+              pattern="^[a-zA-ZA-Яа-яЁё\s]+$"
+              required
+              class="form-input validate"
+            />
+            <div class="error"></div>
+          </div>
+        </div>
+        <div class="container">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="enter your email"
+            value=""
+            required
+            class="form-input validate"
+          />
+          <div class="error"></div>
+        </div>
+        <div class="flex container">
+          <div class="margin-input">
+            <label for="password" class="form-label"
+              >Password</label
+            >
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="enter your password"
+              minlength="8"
+              required
+              class="form-input validate"
+            />
+            <div class="error"></div>
+          </div>
+          <div>
+            <label for="passwordConfirm" class="form-label"
+              >Confirm Password</label
+            >
+            <input
+              type="password"
+              name="confirmation"
+              id="passwordConfirm"
+              placeholder="enter your password again"
+              minlength="8"
+              required
+              class="form-input validate"
+            />
+            <div class="error"></div>
+          </div>
+        </div>
+        <div class="container">
+          <label for="birthdate" class="form-label"
+            >Date of Birth</label
+          >
+          <input
+            type="date"
+            name="birthdate"
+            id="birthdate"
+            placeholder="YYYY-MM-DD"
+            required
+            class="form-input validate"
+          />
+          <div class="error"></div>
+        </div>
+        <div role="group" class="group-checkbox container">
+          <div class="group-margin">
+            <p>Gender:</p>
+            <ul class="group-topic">
+              <li class="margin-right">
+                <input
+                  class="input-hidden checkbox"
+                  type="radio"
+                  name="gender"
+                  value="user-male"
+                  id="user-male"
+                />
+                <label
+                  class="form-label checkbox-label checkbox-radio"
+                  for="user-male"
+                  >Male</label
+                >
+              </li>
+              <li class="margin-right">
+                <input
+                  class="input-hidden checkbox"
+                  type="radio"
+                  name="gender"
+                  value="user-female"
+                  id="user-female"
+                />
+                <label
+                  class="form-label checkbox-label checkbox-radio"
+                  for="user-female"
+                  >Female</label
+                >
+              </li>
+            </ul>
+          </div>
+          <div role="group" class="group-flex">
+            <div class="group-margin">
+              <p>Hobbies</p>
+              <ul class="group-topic">
+                <li class="margin-right">
+                  <input
+                    class="input-hidden checkbox"
+                    type="checkbox"
+                    name="hobbies"
+                    value="music"
+                    id="music"
+                  />
+                  <label class="form-label checkbox-label" for="music"
+                    >Music</label
+                  >
+                </li>
+                <li class="margin-right">
+                  <input
+                    class="input-hidden checkbox"
+                    type="checkbox"
+                    name="hobbies"
+                    value="sports"
+                    id="sports"
+                  />
+                  <label class="form-label checkbox-label" for="sports"
+                    >Sports</label
+                  >
+                </li>
+                <li class="margin-right">
+                  <input
+                    class="input-hidden checkbox"
+                    type="checkbox"
+                    name="hobbies"
+                    value="travel"
+                    id="travel"
+                  />
+                  <label class="form-label checkbox-label" for="travel"
+                    >Travel</label
+                  >
+                </li>
+                <li class="margin-right">
+                  <input
+                    class="input-hidden checkbox"
+                    type="checkbox"
+                    name="hobbies"
+                    value="movies"
+                    id="movies"
+                  />
+                  <label class="form-label checkbox-label" for="movies"
+                    >Movies</label
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flex container">
+          <div class="margin-right">
+            <label for="income" class="form-label">Source of Income</label>
+            <div class="select-wrapper">
+              <select name="income" id="income" class="select">
+                <option value="1" selected>Employed</option>
+                <option value="2">Unemployed</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label for="range-income" class="form-label">Income</label>
+            <input
+              class="range"
+              type="range"
+              name="range-income"
+              id="range-income"
+              value="0"
+              min="0"
+              max="50000"
+              step="100"
+            />
+            <button type="button" class="btn-small">50K</button>
+          </div>
+        </div>
+        <div class="group-flex container">
+          <div class="flex-file">
+            <label for="file-png" class="form-label"
+              >Upload Profile Picture</label
+            >
+            <input
+              class="input-file"
+              type="file"
+              name="png"
+              id="file-png"
+              size="1050000"
+              accept="png"
+              multiple
+            />
+          </div>
+          <div class="flex-age">
+            <label for="age" class="form-label">Age</label>
+            <input
+              type="number"
+              name="age"
+              id="age"
+              value=""
+              class="form-input"
+            />
+          </div>
+        </div>
+        <div class="container">
+          <label for="user-message" class="form-label">Additional information</label>
+          <textarea
+            name="user-message"
+            id="user-message"
+            cols=""
+            rows=""
+            class="form-input"
+          ></textarea>
+        </div>
+        <div class="box box-btn container">
+          <button type="submit" class="btn">Create</button>
+        </div>
+      </form>
+    </div>
+    <script defer type="module" src="./js/index.js"></script>
+  </body>
+</html>
